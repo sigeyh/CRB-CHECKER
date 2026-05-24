@@ -97,7 +97,7 @@ app.listen(PORT, () => {
   ╔═══════════════════════════════════════════════╗
   ║       CRB Checker Kenya - Server Running      ║
   ║                                               ║
-  ║   🌐  http://localhost:${PORT}                  ║
+  ║   🌐  https://crb-checker-rose.vercel.app/                 ║
   ║   📱  M-Pesa via PayHero Integration          ║
   ║                                               ║
   ║   Services:                                   ║
