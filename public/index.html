@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRB Checker Kenya — Check Your Credit Standing</title>
+  <meta name="description" content="Check your CRB status and get clearance certificates instantly via M-Pesa. Fast, secure, and affordable credit reference checks for Kenya.">
+  <meta name="keywords" content="CRB check Kenya, credit reference bureau, CRB clearance, M-Pesa, credit score Kenya">
+  <meta name="author" content="CRB Checker Kenya">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#logo-grad)"/>
+            <path d="M8 16C8 11.58 11.58 8 16 8C20.42 8 24 11.58 24 16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M12 16C12 13.79 13.79 12 16 12C18.21 12 20 13.79 20 16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="16" cy="16" r="2" fill="white"/>
+            <path d="M16 18V24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32">
+                <stop stop-color="#006B3F"/>
+                <stop offset="1" stop-color="#00A86B"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span>CRB<span class="logo-accent">Checker</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <button class="nav-cta" onclick="scrollToServices()">Check Now</button>
+      <button class="nav-mobile-toggle" id="mobile-toggle" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#services" onclick="closeMobileMenu()">Services</a>
+      <a href="#how-it-works" onclick="closeMobileMenu()">How It Works</a>
+      <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+      <button class="nav-cta" onclick="scrollToServices(); closeMobileMenu();">Check Now</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-badge animate-fade-in">
+        <span class="badge-dot"></span>
+        Trusted by thousands of Kenyans
+      </div>
+      <h1 class="hero-title animate-fade-in-up">
+        Know Your<br>
+        <span class="gradient-text">Credit Standing</span>
+      </h1>
+      <p class="hero-subtitle animate-fade-in-up delay-1">
+        Check your CRB status or get a clearance certificate instantly.<br>
+        Fast, secure, and powered by M-Pesa.
+      </p>
+      <div class="hero-actions animate-fade-in-up delay-2">
+        <button class="btn btn-primary btn-lg" onclick="scrollToServices()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 12l2 2 4-4"/>
+            <circle cx="12" cy="12" r="10"/>
+          </svg>
+          Get Started — From KES 50
+        </button>
+        <button class="btn btn-ghost btn-lg" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">
+          How It Works
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17l9.2-9.2M17 17V7H7"/>
+          </svg>
+        </button>
+      </div>
+      <div class="hero-stats animate-fade-in-up delay-3">
+        <div class="stat">
+          <span class="stat-number">50K+</span>
+          <span class="stat-label">Reports Generated</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">99.9%</span>
+          <span class="stat-label">Uptime</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">< 2min</span>
+          <span class="stat-label">Processing Time</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Our Services</span>
+        <h2 class="section-title">Choose Your Service</h2>
+        <p class="section-subtitle">Affordable credit checks designed for the Kenyan market</p>
+      </div>
+      <div class="services-grid">
+        <!-- CRB Check Card -->
+        <div class="service-card animate-on-scroll" id="card-check">
+          <div class="card-glow card-glow-green"></div>
+          <div class="card-badge">Most Popular</div>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+              <path d="M16 24L22 30L32 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="card-title">CRB Check</h3>
+          <p class="card-description">Get a detailed view of your credit report including credit score, loan history, and inquiries.</p>
+          <div class="card-price">
+            <span class="price-currency">KES</span>
+            <span class="price-amount">50</span>
+          </div>
+          <ul class="card-features">
+            <li><span class="feature-check">✓</span> Credit Score</li>
+            <li><span class="feature-check">✓</span> Loan Account History</li>
+            <li><span class="feature-check">✓</span> Credit Inquiries</li>
+            <li><span class="feature-check">✓</span> Negative Listings</li>
+            <li><span class="feature-check">✓</span> Instant Results</li>
+          </ul>
+          <button class="btn btn-primary btn-full" onclick="selectService('check')">
+            Check My CRB — KES 50
+          </button>
+        </div>
+
+        <!-- CRB Clearance Card -->
+        <div class="service-card service-card-premium animate-on-scroll" id="card-clearance">
+          <div class="card-glow card-glow-gold"></div>
+          <div class="card-badge card-badge-gold">Premium</div>
+          <div class="card-icon card-icon-gold">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 4L29.5 15.2L42 17.1L33 25.9L35 38.3L24 32.5L13 38.3L15 25.9L6 17.1L18.5 15.2L24 4Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="card-title">CRB Clearance</h3>
+          <p class="card-description">Get an official clearance certificate for employment, loans, or tenancy applications.</p>
+          <div class="card-price">
+            <span class="price-currency">KES</span>
+            <span class="price-amount">100</span>
+          </div>
+          <ul class="card-features">
+            <li><span class="feature-check feature-check-gold">✓</span> Everything in CRB Check</li>
+            <li><span class="feature-check feature-check-gold">✓</span> Clearance Certificate</li>
+            <li><span class="feature-check feature-check-gold">✓</span> Downloadable PDF</li>
+            <li><span class="feature-check feature-check-gold">✓</span> Verification Code</li>
+            <li><span class="feature-check feature-check-gold">✓</span> Valid for 90 Days</li>
+          </ul>
+          <button class="btn btn-gold btn-full" onclick="selectService('clearance')">
+            Get Clearance — KES 100
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Simple Process</span>
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">Get your CRB report in three easy steps</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card animate-on-scroll">
+          <div class="step-number">01</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 32 32" fill="none">
+              <rect x="6" y="4" width="20" height="24" rx="3" stroke="currentColor" stroke-width="2"/>
+              <line x1="10" y1="10" x2="22" y2="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="14" x2="18" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Enter Your Details</h3>
+          <p>Provide your National ID number, full name, and M-Pesa phone number.</p>
+        </div>
+        <div class="step-connector animate-on-scroll">
+          <svg viewBox="0 0 60 20" fill="none">
+            <path d="M0 10H50M50 10L42 4M50 10L42 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="step-card animate-on-scroll">
+          <div class="step-number">02</div>
+          <div class="step-icon step-icon-mpesa">
+            <svg viewBox="0 0 32 32" fill="none">
+              <rect x="8" y="2" width="16" height="28" rx="3" stroke="currentColor" stroke-width="2"/>
+              <circle cx="16" cy="24" r="2" fill="currentColor"/>
+              <path d="M12 12l2.5 3L20 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Pay via M-Pesa</h3>
+          <p>An STK push prompt will appear on your phone. Enter your M-Pesa PIN to pay.</p>
+        </div>
+        <div class="step-connector animate-on-scroll">
+          <svg viewBox="0 0 60 20" fill="none">
+            <path d="M0 10H50M50 10L42 4M50 10L42 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="step-card animate-on-scroll">
+          <div class="step-number">03</div>
+          <div class="step-icon step-icon-report">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M6 4h14l6 6v18a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 4v6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10 18l3 3 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Get Your Report</h3>
+          <p>View your CRB report instantly and download your clearance certificate as PDF.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item animate-on-scroll" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>What is a CRB report?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p>A CRB (Credit Reference Bureau) report is a detailed record of your credit history in Kenya. It includes information about your loans, credit cards, mobile loans (like M-Shwari, Tala, Branch), and payment behavior. Lenders, employers, and landlords may check your CRB status before making decisions.</p>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>How long does it take to get my report?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p>Your CRB report is generated instantly after successful M-Pesa payment. The entire process takes less than 2 minutes.</p>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>What's the difference between CRB Check and Clearance?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p><strong>CRB Check (KES 50)</strong> gives you a detailed view of your credit report, including your credit score, loan history, and any negative listings.<br><br><strong>CRB Clearance (KES 100)</strong> provides an official clearance certificate that you can present to employers, landlords, or lenders. It includes a verification code and is valid for 90 days.</p>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>Is my information secure?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. We use encrypted connections and secure payment processing through M-Pesa via PayHero. Your personal information is never shared with third parties and is only used to generate your CRB report.</p>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>Which payment methods do you accept?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p>We accept M-Pesa payments only. When you click pay, an STK push notification will be sent directly to your phone — just enter your M-Pesa PIN to complete the payment. No manual paybill entry needed!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 32 32" fill="none">
+                <rect width="32" height="32" rx="8" fill="url(#logo-grad2)"/>
+                <path d="M8 16C8 11.58 11.58 8 16 8C20.42 8 24 11.58 24 16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M12 16C12 13.79 13.79 12 16 12C18.21 12 20 13.79 20 16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="16" cy="16" r="2" fill="white"/>
+                <path d="M16 18V24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <defs>
+                  <linearGradient id="logo-grad2" x1="0" y1="0" x2="32" y2="32">
+                    <stop stop-color="#006B3F"/>
+                    <stop offset="1" stop-color="#00A86B"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span>CRB<span class="logo-accent">Checker</span></span>
+          </a>
+          <p class="footer-description">Fast, affordable CRB checks and clearance certificates for the Kenyan market. Powered by M-Pesa.</p>
+        </div>
+        <div class="footer-links-group">
+          <h4>Quick Links</h4>
+          <a href="#services">Services</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-links-group">
+          <h4>Legal</h4>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Refund Policy</a>
+        </div>
+        <div class="footer-links-group">
+          <h4>Contact</h4>
+          <a href="#">support@crbchecker.co.ke</a>
+          <a href="#">+254 700 000 000</a>
+          <a href="#">Nairobi, Kenya</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CRB Checker Kenya. All rights reserved.</p>
+        <p class="footer-disclaimer">This service is for informational purposes. For official CRB reports, contact a licensed bureau.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======= PAYMENT MODAL ======= -->
+  <div class="modal-overlay" id="payment-modal">
+    <div class="modal">
+      <!-- Step 1: Enter Details -->
+      <div class="modal-step" id="step-details">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div class="modal-header">
+          <div class="modal-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+              <path d="M24 14v10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="24" cy="30" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <h2 id="modal-title">CRB Check</h2>
+          <p class="modal-subtitle" id="modal-subtitle">Enter your details to proceed</p>
+        </div>
+        <form id="payment-form" onsubmit="handlePaymentSubmit(event)">
+          <div class="form-group">
+            <label for="full_name">Full Name (as per ID)</label>
+            <input type="text" id="full_name" name="full_name" placeholder="John Kamau Mwangi" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="id_number">National ID Number</label>
+            <input type="text" id="id_number" name="id_number" placeholder="12345678" maxlength="8" required pattern="\d{7,8}" inputmode="numeric">
+            <span class="form-hint">7-8 digit Kenyan ID number</span>
+          </div>
+          <div class="form-group">
+            <label for="phone_number">M-Pesa Phone Number</label>
+            <div class="phone-input-wrapper">
+              <span class="phone-prefix">+254</span>
+              <input type="tel" id="phone_number" name="phone_number" placeholder="7XX XXX XXX" maxlength="12" required inputmode="tel">
+            </div>
+            <span class="form-hint">Safaricom number for M-Pesa payment</span>
+          </div>
+          <div class="payment-summary">
+            <div class="summary-row">
+              <span>Service</span>
+              <span id="summary-service">CRB Check</span>
+            </div>
+            <div class="summary-row summary-total">
+              <span>Amount</span>
+              <span id="summary-amount">KES 50</span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-mpesa btn-full" id="btn-pay">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="5" width="20" height="14" rx="2"/>
+              <path d="M2 10h20"/>
+            </svg>
+            Pay with M-Pesa
+          </button>
+        </form>
+      </div>
+
+      <!-- Step 2: Processing Payment -->
+      <div class="modal-step hidden" id="step-processing">
+        <div class="modal-header">
+          <div class="phone-animation">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="mpesa-prompt">
+                  <div class="mpesa-logo">M-PESA</div>
+                  <p class="mpesa-text">Enter your M-Pesa PIN to pay</p>
+                  <div class="mpesa-amount" id="mpesa-display-amount">KES 50</div>
+                  <div class="pin-dots">
+                    <span class="pin-dot filled"></span>
+                    <span class="pin-dot filled"></span>
+                    <span class="pin-dot"></span>
+                    <span class="pin-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="phone-pulse"></div>
+          </div>
+          <h2>Check Your Phone</h2>
+          <p class="modal-subtitle">An M-Pesa prompt has been sent to your phone.<br>Enter your PIN to complete payment.</p>
+          <div class="processing-status">
+            <div class="spinner"></div>
+            <span id="processing-text">Waiting for payment...</span>
+          </div>
+          <div class="processing-timer">
+            <span>Time remaining: </span>
+            <span id="timer-countdown">01:30</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Success / Report -->
+      <div class="modal-step hidden" id="step-success">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div class="modal-header">
+          <div class="success-animation">
+            <svg class="success-checkmark" viewBox="0 0 80 80">
+              <circle class="checkmark-circle" cx="40" cy="40" r="36" fill="none" stroke="#00A86B" stroke-width="3"/>
+              <path class="checkmark-check" d="M22 40L34 52L58 28" fill="none" stroke="#00A86B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2>Payment Successful!</h2>
+          <p class="modal-subtitle">Your report is ready</p>
+        </div>
+        <div id="report-content">
+          <!-- Dynamic report content inserted here -->
+        </div>
+        <div class="report-actions">
+          <button class="btn btn-primary btn-full" id="btn-download" onclick="downloadReport()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download PDF
+          </button>
+          <button class="btn btn-ghost btn-full" onclick="closeModal()">Close</button>
+        </div>
+      </div>
+
+      <!-- Step: Error -->
+      <div class="modal-step hidden" id="step-error">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div class="modal-header">
+          <div class="error-icon">
+            <svg viewBox="0 0 80 80">
+              <circle cx="40" cy="40" r="36" fill="none" stroke="#E53E3E" stroke-width="3"/>
+              <path d="M28 28L52 52M52 28L28 52" stroke="#E53E3E" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h2>Payment Failed</h2>
+          <p class="modal-subtitle" id="error-message">Something went wrong. Please try again.</p>
+        </div>
+        <button class="btn btn-primary btn-full" onclick="resetToDetails()">Try Again</button>
+        <button class="btn btn-ghost btn-full" onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
