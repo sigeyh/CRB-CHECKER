@@ -37,7 +37,7 @@ async function initiateSTKPush(amount, phoneNumber, externalReference) {
       channel_id: channelId,
       provider: 'm-pesa',
       external_reference: externalReference,
-      callback_url: process.env.CALLBACK_URL || 'https://your-domain.com/api/payment/callback'
+      callback_url: process.env.CALLBACK_URL || 'https://crb-checker-rose.vercel.app/api/payment/callback'
     };
 
     console.log('[PayHero] Initiating STK Push:', {
